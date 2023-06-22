@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciador de Academia</title>
+    <style>
+        /* Estilos globais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos para a barra lateral */
+        .sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* Estilos para os links da barra lateral */
+        .sidebar a {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Estilos para os links ativos da barra lateral */
+        .sidebar a.active {
+            font-weight: bold;
+            background-color: #555;
+        }
+
+        /* Estilos para o conteúdo principal */
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        /* Estilos para os títulos das abas */
+        .content h2 {
+            color: #333;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        /* Estilos para o calendário */
+        #calendar {
+            margin-top: 20px;
+        }
+    </style>
+    <script src="../../node_modules/fullcalendar/index.global.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridWeek',
+                weekends: false
+            });
+            calendar.render();
+        });
+    </script>
+</head>
+<body>
+<div class="sidebar">
+    <a class="active">Dashboard</a>
+</div>
+
+<div class="content">
+
+    <div id="dashboard">
+        <h1>Treinos da Semana :</h1>
+    </div>
+    <div id="calendar"></div>
+</div>
+</body>
+</html>

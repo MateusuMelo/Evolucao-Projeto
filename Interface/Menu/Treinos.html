@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Gerenciador de Academia</title>
+  <style>
+    /* Estilos globais */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Estilos para a barra lateral */
+    .sidebar {
+      height: 100%;
+      width: 200px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+    
+    /* Estilos para os links da barra lateral */
+    .sidebar a {
+      display: block;
+      margin-bottom: 10px;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    
+    /* Estilos para os links ativos da barra lateral */
+    .sidebar a.active {
+      font-weight: bold;
+      background-color: #555;
+    }
+    
+    /* Estilos para o conteúdo principal */
+    .content {
+      margin-left: 200px;
+      padding: 20px;
+    }
+    
+    /* Estilos para os títulos das abas */
+    .content h2 {
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="Clientes.html">Clientes</a>
+    <a class="active" >Treinos</a>
+    <a href="Financeiro.html">Financeiro</a>
+  </div>
+  
+  <div class="content"> NADA NO TREINO
+  </div>
+</body>
+</html>
