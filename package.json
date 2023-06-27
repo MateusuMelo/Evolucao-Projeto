@@ -1,0 +1,20 @@
+{
+  "name": "evolucao-projeto",
+  "version": "1.0.0",
+  "description": "Projecto final das materias de Orientação a objetos e banco de dados.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Mateus Correa de Melo",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.1.1"
+  },
+  "dependencies": {
+    "electron-remote": "^1.3.0",
+    "fullcalendar": "^6.1.8",
+    "mysql": "^2.18.1"
+  }
+}
