@@ -21,6 +21,7 @@
             background-color: #333;
             color: #fff;
             padding: 20px;
+            float: left;
         }
 
         /* Estilos para os links da barra lateral */
@@ -40,7 +41,7 @@
 
         /* Estilos para o conteúdo principal */
         .content {
-            margin-left: 200px;
+            margin-left: 250px;
             padding: 20px;
         }
 
@@ -50,17 +51,66 @@
             border-bottom: 1px solid #ccc;
             padding-bottom: 10px;
         }
+
+        /* Estilos para a tabela de usuários */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* Estilos para os botões */
+        .button {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #555;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #333;
+        }
     </style>
+    <script type="module" src="Clientes.js"></script>
 </head>
 <body>
 <div class="sidebar">
-    <a class="active">Clientes</a>
+    <a class="active" onclick="showUsers()">Clientes</a>
     <a href="Treinos.html">Treinos</a>
     <a href="Financeiro.html">Financeiro</a>
 </div>
 
-<div class="content"> NADA
+<div class="content">
+    <h2>Pesquisar Usuário</h2>
+    <input type="text" id="searchInput" placeholder="Digite o nome do usuário">
+    <button id="searchButton" class="button">Pesquisar</button>
+
+    <div id="userTableContainer"></div>
+
+    <h2>Cadastrar Novo Usuário</h2>
+    <form id="addUser-form">
+        <input type="text" id="nomeInput" placeholder="Nome">
+        <input type="text" id="cpfInput" placeholder="CPF">
+        <input type="text" id="n_cellInput" placeholder="Numero de Celular">
+        <input type="text" id="enderecoInput" placeholder="Endereço">
+        <button type="submit" class="button">Cadastrar</button>
+    </form>
+    <p id="addMessage"></p>
 
 </div>
+
 </body>
 </html>

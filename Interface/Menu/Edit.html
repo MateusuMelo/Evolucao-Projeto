@@ -1,10 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Edição de Usuário</title>
+    <style>
+        /* Estilos */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            display: block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #555;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div class="container">
+    <h2>Editar Informações do Usuário</h2>
+
+    <h2>Rotinas de Treino</h2>
+
+    <table id="treino-table">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Treino</th>
+            <th>Séries</th>
+            <th>Repetições</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td rowspan="4">Rotina A</td>
+            <td>
+                <select class="treino">
+                    <option value="">Selecione um treino</option>
+                </select>
+            </td>
+            <td><input type="text" class="series" placeholder="Digite a quantidade de séries"></td>
+            <td><input type="text" class="repeticoes" placeholder="Digite a quantidade de repetições"></td>
+        </tr>
+        <tr>
+            <td>
+                <select class="treino">
+                    <option value="">Selecione um treino</option>
+                </select>
+            </td>
+            <td><input type="text" class="series" placeholder="Digite a quantidade de séries"></td>
+            <td><input type="text" class="repeticoes" placeholder="Digite a quantidade de repetições"></td>
+        </tr>
+        <tr>
+            <td>
+                <select class="treino">
+                    <option value="">Selecione um treino</option>
+                </select>
+            </td>
+            <td><input type="text" class="series" placeholder="Digite a quantidade de séries"></td>
+            <td><input type="text" class="repeticoes" placeholder="Digite a quantidade de repetições"></td>
+        </tr>
+        <tr>
+            <td>
+                <select class="treino">
+                    <option value="">Selecione um treino</option>
+                </select>
+            </td>
+            <td><input type="text" class="series" placeholder="Digite a quantidade de séries"></td>
+            <td><input type="text" class="repeticoes" placeholder="Digite a quantidade de repetições"></td>
+        </tr>
+        <tr>
+            <td rowspan="4">Rotina B</td>
+            <td>
+                <select class="treino">
+                    <option value="">Selecione um treino</option>
+                </select>
+            </td>
+            <td><input type="text" class="series" placeholder="Digite a quantidade de séries"></td>
+            <td><input type="text" class="repeticoes" placeholder="Digite a quantidade de repetições"></td>
+        </tr>
+        <tr>
+            <td>
+                <select class="treino">
+                    <option value="">Selecione um treino</option>
+                </select>
+            </td>
+            <td><input type="text" class="series" placeholder="Digite a quantidade de séries"></td>
+            <td><input type="text" class="repeticoes" placeholder="Digite a quantidade de repetições"></td>
+        </tr>
+        <tr>
+            <td>
+                <select class="treino">
+                    <option value="">Selecione um treino</option>
+                </select>
+            </td>
+            <td><input type="text" class="series" placeholder="Digite a quantidade de séries"></td>
+            <td><input type="text" class="repeticoes" placeholder="Digite a quantidade de repetições"></td>
+        </tr>
+        <tr>
+            <td>
+                <select class="treino">
+                    <option value="">Selecione um treino</option>
+                </select>
+            </td>
+            <td><input type="text" class="series" placeholder="Digite a quantidade de séries"></td>
+            <td><input type="text" class="repeticoes" placeholder="Digite a quantidade de repetições"></td>
+        </tr>
+        <tr>
+            <td rowspan="4">Rotina C</td>
+            <td>
+                <select class="treino">
+                    <option value="">Selecione um treino</option>
+                </select>
+            </td>
+            <td><input type="text" class="series" placeholder="Digite a quantidade de séries"></td>
+            <td><input type="text" class="repeticoes" placeholder="Digite a quantidade de repetições"></td>
+        </tr>
+        <tr>
+            <td>
+                <select class="treino">
+                    <option value="">Selecione um treino</option>
+                </select>
+            </td>
+            <td><input type="text" class="series" placeholder="Digite a quantidade de séries"></td>
+            <td><input type="text" class="repeticoes" placeholder="Digite a quantidade de repetições"></td>
+        </tr>
+        <tr>
+            <td>
+                <select class="treino">
+                    <option value="">Selecione um treino</option>
+                </select>
+            </td>
+            <td><input type="text" class="series" placeholder="Digite a quantidade de séries"></td>
+            <td><input type="text" class="repeticoes" placeholder="Digite a quantidade de repetições"></td>
+        </tr>
+        <tr>
+            <td>
+                <select class="treino">
+                    <option value="">Selecione um treino</option>
+                </select>
+            </td>
+            <td><input type="text" class="series" placeholder="Digite a quantidade de séries"></td>
+            <td><input type="text" class="repeticoes" placeholder="Digite a quantidade de repetições"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <button id="adicionarRotina">Adicionar Rotina</button>
+    <button id="salvar">Salvar</button>
+</div>
+
+<script type="module" src="Edit.js"></script>
 </body>
 </html>

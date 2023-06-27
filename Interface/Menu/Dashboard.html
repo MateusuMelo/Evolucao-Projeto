@@ -55,15 +55,85 @@
         #calendar {
             margin-top: 20px;
         }
+
+        /* Estilos para os treinos */
+        .event-content {
+            font-size: medium;
+            margin-top: 15px;
+        }
     </style>
     <script src="../../node_modules/fullcalendar/index.global.min.js"></script>
-    <script>
+    <script type="module">
+
+        const rotina_A = [];
+        const rotina_B = [];
+        const rotina_C = [];
         document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
+
+            let id;
+            window.api.send('admOnlineId');
+            window.api.receive('admOnlineId-reply', (Response) => {
+                id = Response;
+                window.api.send('get_treino_rotina', id);
+                window.api.receive('get_treino_rotina', (Response) => {
+                    for (const t_h_r of Response) {
+
+                        if (t_h_r.Nome_rotina == 'Rotina A') {
+                            rotina_A.push(t_h_r);
+                        } else if (t_h_r.Nome_rotina == 'Rotina B') {
+                            rotina_B.push(t_h_r);
+                        } else {
+                            rotina_C.push(t_h_r);
+                        }
+                    }
+                    console.log(rotina_A[0].Series);
+                    console.log(rotina_B);
+                    console.log(rotina_C);
+                });
+            })
+            const treinosSemana = [
+                {date: '2023-06-19', events: rotina_A},
+                {date: '2023-06-20', events: rotina_B},
+                {date: '2023-06-21', events: rotina_A},
+                {date: '2023-06-22', events: rotina_B},
+                {date: '2023-06-23', events: rotina_C},
+                // Resto dos dias da semana...
+            ];
+
+            const events = [];
+            for (const {date, events: treinos} of treinosSemana) {
+                for (const treino in treinos) {
+                    console.log(treinos);
+                    events.push({
+
+                        title: treino.Nome_rotina,
+                        start: date,
+                        extendedProps: {
+                            series: treino.Series,
+                            repeticoes: treino.repeticoes,
+                        },
+                    });
+                }
+
+            }
+
+            const calendarEl = document.getElementById('calendar');
+            const calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridWeek',
-                weekends: false
+                weekends: false,
+                events: events,
+                eventContent: function (arg) {
+                    const eventContent = document.createElement('div');
+                    eventContent.classList.add('event-content');
+
+                    const treinoText = document.createElement('div');
+                    treinoText.textContent = `${arg.event.title}: Series - ${arg.event.extendedProps.series}, Repetições - ${arg.event.extendedProps.repeticoes}`;
+
+                    eventContent.appendChild(treinoText);
+                    return {domNodes: [eventContent]};
+                },
             });
+
             calendar.render();
         });
     </script>
@@ -74,9 +144,8 @@
 </div>
 
 <div class="content">
-
     <div id="dashboard">
-        <h1>Treinos da Semana :</h1>
+        <h1>Treinos da Semana:</h1>
     </div>
     <div id="calendar"></div>
 </div>

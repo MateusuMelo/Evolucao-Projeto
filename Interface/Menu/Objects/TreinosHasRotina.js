@@ -1,5 +1,4 @@
 class TreinosHasRotina{
-
     constructor(id_treino, id_rotina, id_usuario, series, repeticoes) {
         this.id_treino = id_treino;
         this.id_rotina= id_rotina;
@@ -8,3 +7,4 @@ class TreinosHasRotina{
         this.repeticoes = repeticoes;
     }
 }
+export default TreinosHasRotina;

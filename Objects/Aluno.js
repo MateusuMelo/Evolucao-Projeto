@@ -1,5 +1,5 @@
 const User = require('./User')
-class aluno extends User{
+class Aluno extends User{
 
     constructor(id, nome, senha, cpf, celular, endereco, id_personal) {
         super(id, nome, senha, cpf);
@@ -44,4 +44,4 @@ class aluno extends User{
         this._endereco = value;
     }
 }
-module.exports = aluno;
+module.exports = Aluno;
