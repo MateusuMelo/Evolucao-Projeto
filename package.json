@@ -16,5 +16,13 @@
     "electron-remote": "^1.3.0",
     "fullcalendar": "^6.1.8",
     "mysql": "^2.18.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MateusuMelo/Evolucao-Projeto.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MateusuMelo/Evolucao-Projeto/issues"
+  },
+  "homepage": "https://github.com/MateusuMelo/Evolucao-Projeto#readme"
 }
