@@ -8,20 +8,27 @@ Antes de começar, você precisa ter os seguintes pré-requisitos instalados em 
 
 ## Instalação
 
+criar ambiente node
 ```bash
 npm init
+```
 
+### dependencias
 ```bash
 npm install electron
+```
 
 ```bash
 npm install mysql
+```
 
 ```bash
 npm install fullcalendar
+```
 
 ## Incializando
 
 ```bash
 npm start
+```
 
